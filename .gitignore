@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build output
+out/
+dist/
+
+# Electron-builder
+dist-electron/
+
+# Environment & secrets
+.env
+.env.*
+*.local
+
+# electron-store data (lives in AppData, but just in case)
+*.json.bak
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+*.suo
+*.user
+
+# Claude Code internal
+.claude/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vite / TypeScript cache
+.vite/
+*.tsbuildinfo
+
+# Test coverage
+coverage/

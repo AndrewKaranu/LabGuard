@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: oklch(0.12 0.02 260);
+  --color-foreground: oklch(0.88 0.02 220);
+
+  --color-muted: oklch(0.18 0.02 260);
+  --color-muted-foreground: oklch(0.55 0.02 220);
+
+  --color-accent: oklch(0.22 0.03 260);
+  --color-accent-foreground: oklch(0.98 0.01 220);
+
+  --color-border: oklch(0.22 0.03 260);
+  --color-input: oklch(0.22 0.03 260);
+  --color-ring: oklch(0.60 0.18 280);
+
+  --color-primary: oklch(0.65 0.18 280);
+  --color-primary-foreground: oklch(0.98 0.01 220);
+
+  --color-secondary: oklch(0.18 0.02 260);
+  --color-secondary-foreground: oklch(0.98 0.01 220);
+
+  --color-destructive: oklch(0.40 0.18 25);
+  --color-destructive-foreground: oklch(0.98 0.01 220);
+
+  --color-card: oklch(0.14 0.02 260);
+  --color-card-foreground: oklch(0.88 0.02 220);
+
+  --color-popover: oklch(0.12 0.02 260);
+  --color-popover-foreground: oklch(0.55 0.02 220);
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
+
+/* Electron drag region */
+.drag-region {
+  -webkit-app-region: drag;
+}
+.no-drag {
+  -webkit-app-region: no-drag;
+}
